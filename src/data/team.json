@@ -2,7 +2,7 @@
   {
     "name": "Mitchell Mecham",
     "github": "MLMecham",
-    "linkedin": null,
+    "linkedin": "https://www.linkedin.com/in/mitchell-mecham/",
     "game": "emberwake",
     "role": "Co-creator · Emberwake",
     "bio": "Builds worlds you can get lost in. Emberwake is a love letter to retro dungeon crawlers, made so a few friends can clear dungeons together from a browser tab."
@@ -10,7 +10,7 @@
   {
     "name": "Logan Lay",
     "github": "Logan-Lay21",
-    "linkedin": null,
+    "linkedin": "https://www.linkedin.com/in/logan-lay22/",
     "game": "dot-slayer",
     "role": "Co-creator · Dot Slayer",
     "school": "BYU-Idaho",
@@ -20,9 +20,9 @@
     "name": "Soroosh Noorzad",
     "github": "Soroosh-N",
     "linkedin": "https://www.linkedin.com/in/soroosh-noorzad/",
-    "game": "afterglow",
-    "role": "Co-creator · Afterglow",
+    "game": "own-the-night",
+    "role": "Co-creator · Own The Night",
     "school": "University of Utah",
-    "bio": "An all-time student in every field. Made Afterglow, a neon night-racing game with eight cars, four neighborhoods and AI that actually races back."
+    "bio": "An all-time student in every field. Made Own The Night, a neon night-racing game with eight cars, four neighborhoods and AI that actually races back."
   }
 ]
