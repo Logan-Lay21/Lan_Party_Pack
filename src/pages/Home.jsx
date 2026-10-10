@@ -2,6 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import GameCard from '../components/GameCard.jsx';
 import { ALL_GAMES } from '../games.js';
 
+const MAX_PLAYERS = Math.max(...ALL_GAMES.map((g) => g.maxPlayers));
+
 const STEPS = [
   { n: '01', t: 'Build a party', b: 'Add games from the pack to your playlist and add everyone\'s name. It all saves on the host\'s device.' },
   { n: '02', t: 'Everyone joins', b: 'Each game has its own join flow: a short code, a link, or a QR scan. We show the steps on the game page.' },
@@ -15,7 +17,7 @@ export default function Home() {
       <section className="hero">
         <div className="wrap hero-in">
           <div className="hero-copy">
-            <div className="eyebrow">1 to 4 players · LAN multiplayer · runs in your browser</div>
+            <div className="eyebrow">1 to {MAX_PLAYERS} players · LAN multiplayer · runs in your browser</div>
             <h1>A pile of games for the room you are actually in.</h1>
             <p className="lead">The LAN Party Pack is a growing collection of browser games. Play solo, but it is way better with friends on the same Wi-Fi. No installs, just an internet connection to load the games.</p>
             <div className="row">

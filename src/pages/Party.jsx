@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { byId, playersLabel } from '../games.js';
+import { byId, playersLabel, playLink } from '../games.js';
 import { useParty } from '../party.jsx';
 import { Thumb } from '../components/GameCard.jsx';
 
@@ -69,7 +69,7 @@ export default function Party() {
                     <div className="row tight">
                       <button className="iconbtn" aria-label={'Move ' + g.name + ' up'} onClick={() => move(g.id, -1)} disabled={i === 0}>↑</button>
                       <button className="iconbtn" aria-label={'Move ' + g.name + ' down'} onClick={() => move(g.id, 1)} disabled={i === queue.length - 1}>↓</button>
-                      <a className="btn sm" href={g.playUrl} target="_blank" rel="noreferrer">Launch</a>
+                      <a className="btn sm" href={playLink(g).href} target="_blank" rel="noreferrer">{g.playUrl ? 'Launch' : 'Download'}</a>
                       <button className="iconbtn" aria-label={'Remove ' + g.name} onClick={() => removeGame(g.id)}>✕</button>
                     </div>
                   </li>

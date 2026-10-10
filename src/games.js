@@ -12,7 +12,11 @@ export const CONNECTION = {
   'solo-only': { badge: 'Solo only', icon: '○', note: 'Single player.' },
 };
 
-export const isMobile = (g) => (g.platforms || []).includes('Mobile');
+// Games without a hosted playUrl link to their repo for download instead.
+export const NOT_HOSTED = 'Not on the web yet. Download it from GitHub and open index.html to play solo.';
+export const playLink = (g) => (g.playUrl ? { href: g.playUrl, label: 'Play' } : { href: g.repo, label: 'Download' });
+
+export const isMobile =(g) => (g.platforms || []).includes('Mobile');
 
 export const playersLabel = (g) =>
   g.minPlayers === g.maxPlayers

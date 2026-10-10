@@ -43,5 +43,28 @@
       "Friends open the game and enter the code."
     ],
     "author": "Logan-Lay21"
+  },
+  {
+    "id": "afterglow",
+    "name": "Afterglow",
+    "tagline": "Night-time 3D street racing. Eight cars, four neighborhoods, five weather settings, handbrake drifts and competitive AI.",
+    "repo": "https://github.com/Soroosh-N/OwnTheNight",
+    "playUrl": null,
+    "thumbnail": null,
+    "accent": "#B48CFF",
+    "minPlayers": 1,
+    "maxPlayers": 6,
+    "modes": ["Solo", "LAN multiplayer (coming soon)"],
+    "connection": "lan",
+    "platforms": ["Desktop"],
+    "genres": ["Racing"],
+    "length": "10 to 30 min",
+    "controls": "WASD or arrows to drive, Space handbrake, Shift nitro, P autopilot, R recover to last checkpoint, Esc pause.",
+    "howToJoin": [
+      "LAN multiplayer is coming soon to the hosted version.",
+      "For now, the host downloads the repo and runs npm start (needs Node.js), then shares the network address it prints.",
+      "Everyone on the same Wi-Fi opens that address, picks LAN MULTIPLAYER, and creates or joins a room. Up to six racers, with AI filling empty seats."
+    ],
+    "author": "Soroosh-N"
   }
 ]

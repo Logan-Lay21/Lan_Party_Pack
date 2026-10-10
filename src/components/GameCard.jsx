@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONNECTION, isMobile, playersLabel } from '../games.js';
+import { CONNECTION, isMobile, playersLabel, playLink } from '../games.js';
 import { useParty } from '../party.jsx';
 
 export function Thumb({ game, tall }) {
@@ -15,6 +15,7 @@ export default function GameCard({ game }) {
   const { inQueue, addGame, removeGame } = useParty();
   const queued = inQueue(game.id);
   const conn = CONNECTION[game.connection];
+  const play = playLink(game);
   return (
     <article className="card" style={{ '--c': game.accent }}>
       <Link to={'/games/' + game.id} aria-label={game.name}><Thumb game={game} /></Link>
@@ -28,7 +29,7 @@ export default function GameCard({ game }) {
           {isMobile(game) && <span className="tag">📱 Mobile friendly</span>}
         </div>
         <div className="row">
-          <a className="btn sm" href={game.playUrl} target="_blank" rel="noreferrer">Play</a>
+          <a className="btn sm" href={play.href} target="_blank" rel="noreferrer">{play.label}</a>
           <button className={'btn sm ghost' + (queued ? ' on' : '')} onClick={() => (queued ? removeGame(game.id) : addGame(game.id))}>
             {queued ? '✓ In party' : '+ Party'}
           </button>

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { Thumb } from '../components/GameCard.jsx';
-import { byId, CONNECTION, NEEDS_INTERNET, playersLabel } from '../games.js';
+import { byId, CONNECTION, NEEDS_INTERNET, NOT_HOSTED, playersLabel, playLink } from '../games.js';
 import { useParty } from '../party.jsx';
 
 export default function Game() {
@@ -18,6 +18,7 @@ export default function Game() {
   }
   const conn = CONNECTION[game.connection];
   const queued = inQueue(game.id);
+  const play = playLink(game);
   const meta = [
     ['Players', playersLabel(game)],
     ['Modes', game.modes.join(', ')],
@@ -36,8 +37,8 @@ export default function Game() {
           <p className="lead">{game.tagline}</p>
           <div className="stage">
             <Thumb game={game} tall />
-            <a className="btn big" href={game.playUrl} target="_blank" rel="noreferrer">Play now</a>
-            <div className="mono small">Opens the game in a new tab. Needs internet.</div>
+            <a className="btn big" href={play.href} target="_blank" rel="noreferrer">{game.playUrl ? 'Play now' : 'Download on GitHub'}</a>
+            <div className="mono small">{game.playUrl ? 'Opens the game in a new tab. Needs internet.' : NOT_HOSTED}</div>
           </div>
           <div className="two-up">
             <section className="box">
@@ -70,7 +71,7 @@ export default function Game() {
           <div className="box">
             <div className="strong">{conn.icon} {conn.badge}</div>
             <p className="muted small">{conn.note}</p>
-            <p className="muted small">{NEEDS_INTERNET}</p>
+            <p className="muted small">{game.playUrl ? NEEDS_INTERNET : NOT_HOSTED}</p>
           </div>
         </aside>
       </div>

@@ -18,7 +18,7 @@ Add one object to `src/data/games.json`. Fields:
 | --- | --- |
 | `id` | URL slug, unique |
 | `name`, `tagline` | Card and page text |
-| `repo`, `playUrl` | GitHub repo and the hosted game |
+| `repo`, `playUrl` | GitHub repo and the hosted game. Set `playUrl` to `null` if it isn't hosted yet; Play becomes a Download link to the repo |
 | `thumbnail` | Path or URL to an image, or `null` for a generated tile |
 | `accent` | Hex color used on the card |
 | `minPlayers`, `maxPlayers` | Player counts |
