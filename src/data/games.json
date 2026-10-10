@@ -1,0 +1,45 @@
+[
+  {
+    "id": "emberwake",
+    "name": "Emberwake",
+    "tagline": "A first-person, retro pixel-3D adventure. Clear nine dungeons, collect eight Ember Shards, unmake the Hollow King.",
+    "repo": "https://github.com/MLMecham/emberwake",
+    "playUrl": "https://mlmecham.github.io/emberwake/",
+    "thumbnail": null,
+    "accent": "#FF6A47",
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "modes": ["Solo", "Co-op"],
+    "connection": "offline-capable",
+    "genres": ["Adventure"],
+    "length": "30+ min",
+    "controls": "WASD move, mouse look, click or Space attack, right-click or E item, M map, Esc menu. Gamepads work too.",
+    "howToJoin": [
+      "Host opens Menu, then Invite Friends, which shows a 5-character code.",
+      "Friends pick Join a Friend and type the code, or open the invite link.",
+      "No internet? Everyone joins the same hotspot or Wi-Fi and uses the webcam QR option on both sides."
+    ],
+    "author": "MLMecham"
+  },
+  {
+    "id": "dot-slayer",
+    "name": "Dot Slayer",
+    "tagline": "Fast browser arena game with room-code co-op for up to four players.",
+    "repo": "https://github.com/Logan-Lay21/Dot_Slayer",
+    "playUrl": "https://logan-lay21.github.io/Dot_Slayer/",
+    "thumbnail": null,
+    "accent": "#3DE0D0",
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "modes": ["Solo", "Co-op"],
+    "connection": "join-code",
+    "genres": ["Arcade"],
+    "length": "10 to 30 min",
+    "controls": "See the in-game instructions.",
+    "howToJoin": [
+      "Host starts a room and gets a room code.",
+      "Friends open the game and enter the code."
+    ],
+    "author": "Logan-Lay21"
+  }
+]
