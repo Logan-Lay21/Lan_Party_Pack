@@ -1,6 +1,6 @@
 # The LAN Party Pack
 
-A hub for browser games that run client-side. Play solo, better with friends on the same Wi-Fi. The hub is a static React site: it lists games, links to each game's own repo and Pages site, and has a local Party Mode (playlist, players, scoreboard).
+A hub for browser games that run client-side. Play solo, better with friends on the same Wi-Fi. Every game is hosted on GitHub Pages, so players need internet to load it. The hub is a static React site: it lists games, links to each game's own repo and Pages site, and has a local Party Mode (playlist, players, scoreboard).
 
 ## Run it
 
@@ -23,7 +23,8 @@ Add one object to `src/data/games.json`. Fields:
 | `accent` | Hex color used on the card |
 | `minPlayers`, `maxPlayers` | Player counts |
 | `modes` | e.g. `["Solo", "Co-op"]` |
-| `connection` | `offline-capable`, `join-code`, or `solo-only` |
+| `connection` | `lan`, `online`, or `solo-only` |
+| `platforms` | `["Desktop"]` or `["Desktop", "Mobile"]`. `Mobile` adds the Mobile friendly tag |
 | `genres`, `length` | Filters. `length` is `Under 10 min`, `10 to 30 min`, or `30+ min` |
 | `controls`, `howToJoin` | Game page content (`howToJoin` is a list of steps) |
 | `author` | GitHub handle |

@@ -4,7 +4,7 @@ import { ALL_GAMES } from '../games.js';
 
 const STEPS = [
   { n: '01', t: 'Build a party', b: 'Add games from the pack to your playlist and add everyone\'s name. It all saves on the host\'s device.' },
-  { n: '02', t: 'Everyone joins', b: 'Each game has its own join flow: a short code, a link, or an offline QR. We show the steps on the game page.' },
+  { n: '02', t: 'Everyone joins', b: 'Each game has its own join flow: a short code, a link, or a QR scan. We show the steps on the game page.' },
   { n: '03', t: 'Play and keep score', b: 'Launch games back to back from the party screen and track who is winning the night.' },
 ];
 
@@ -15,9 +15,9 @@ export default function Home() {
       <section className="hero">
         <div className="wrap hero-in">
           <div className="hero-copy">
-            <div className="eyebrow">1 to 4 players · runs in your browser</div>
+            <div className="eyebrow">1 to 4 players · LAN multiplayer · runs in your browser</div>
             <h1>A pile of games for the room you are actually in.</h1>
-            <p className="lead">The LAN Party Pack is a growing collection of browser games. Play solo, but it is way better with friends on the same Wi-Fi. No installs.</p>
+            <p className="lead">The LAN Party Pack is a growing collection of browser games. Play solo, but it is way better with friends on the same Wi-Fi. No installs, just an internet connection to load the games.</p>
             <div className="row">
               <Link className="btn" to="/party">Start a party</Link>
               <Link className="btn ghost" to="/games">Browse games</Link>
@@ -62,12 +62,12 @@ export default function Home() {
         <div className="wrap two">
           <div>
             <h2>Will it work on our Wi-Fi?</h2>
-            <p className="muted">Most games connect players straight to each other. That works on most home networks, but some school, work and phone-hotspot networks block it. Each game page tells you what it needs, and some offer an offline join option.</p>
+            <p className="muted">Every game is hosted on GitHub Pages, so you need an internet connection to open it. Multiplayer connects players on the same Wi-Fi or hotspot straight to each other. That works on most home networks, but some school, work and phone-hotspot networks block it. Each game page tells you what it needs.</p>
           </div>
           <div className="tags big">
-            <span className="tag">● Works offline</span>
-            <span className="tag">◐ Needs internet to join</span>
-            <span className="tag">○ Solo only</span>
+            <span className="tag">● LAN multiplayer</span>
+            <span className="tag">📱 Mobile friendly</span>
+            <span className="tag">🌐 Needs internet to load</span>
           </div>
         </div>
       </section>

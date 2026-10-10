@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONNECTION, playersLabel } from '../games.js';
+import { CONNECTION, isMobile, playersLabel } from '../games.js';
 import { useParty } from '../party.jsx';
 
 export function Thumb({ game, tall }) {
@@ -23,7 +23,9 @@ export default function GameCard({ game }) {
         <p className="muted clamp">{game.tagline}</p>
         <div className="tags">
           <span className="tag">{playersLabel(game)}</span>
+          <span className="tag">{game.genres.join(', ')}</span>
           <span className="tag">{conn.icon} {conn.badge}</span>
+          {isMobile(game) && <span className="tag">📱 Mobile friendly</span>}
         </div>
         <div className="row">
           <a className="btn sm" href={game.playUrl} target="_blank" rel="noreferrer">Play</a>

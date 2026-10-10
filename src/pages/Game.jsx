@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { Thumb } from '../components/GameCard.jsx';
-import { byId, CONNECTION, playersLabel } from '../games.js';
+import { byId, CONNECTION, NEEDS_INTERNET, playersLabel } from '../games.js';
 import { useParty } from '../party.jsx';
 
 export default function Game() {
@@ -22,6 +22,7 @@ export default function Game() {
     ['Players', playersLabel(game)],
     ['Modes', game.modes.join(', ')],
     ['Genre', game.genres.join(', ')],
+    ['Devices', (game.platforms || ['Desktop']).join(', ')],
     ['Session length', game.length],
     ['Author', game.author],
   ];
@@ -36,7 +37,7 @@ export default function Game() {
           <div className="stage">
             <Thumb game={game} tall />
             <a className="btn big" href={game.playUrl} target="_blank" rel="noreferrer">Play now</a>
-            <div className="mono small">Opens the game in a new tab</div>
+            <div className="mono small">Opens the game in a new tab. Needs internet.</div>
           </div>
           <div className="two-up">
             <section className="box">
@@ -69,6 +70,7 @@ export default function Game() {
           <div className="box">
             <div className="strong">{conn.icon} {conn.badge}</div>
             <p className="muted small">{conn.note}</p>
+            <p className="muted small">{NEEDS_INTERNET}</p>
           </div>
         </aside>
       </div>

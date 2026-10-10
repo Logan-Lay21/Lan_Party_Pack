@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import GameCard from '../components/GameCard.jsx';
-import { ALL_GAMES, ALL_GENRES, ALL_LENGTHS } from '../games.js';
+import { ALL_CONNECTIONS, ALL_GAMES, ALL_GENRES, ALL_LENGTHS, CONNECTION, isMobile } from '../games.js';
 
 function Group({ title, options, selected, onToggle }) {
   return (
@@ -24,6 +24,7 @@ export default function Browse() {
   const [players, setPlayers] = useState([]);
   const [conn, setConn] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [mobile, setMobile] = useState([]);
   const [lengths, setLengths] = useState([]);
 
   const list = useMemo(() => {
@@ -34,14 +35,15 @@ export default function Browse() {
       if (players.includes('group') && g.maxPlayers < 2) return false;
       if (conn.length && !conn.includes(g.connection)) return false;
       if (genres.length && !g.genres.some((x) => genres.includes(x))) return false;
+      if (mobile.length && !isMobile(g)) return false;
       if (lengths.length && !lengths.includes(g.length)) return false;
       return true;
     });
     out = [...out].sort((a, b) => (sort === 'players' ? b.maxPlayers - a.maxPlayers : a.name.localeCompare(b.name)));
     return out;
-  }, [q, sort, players, conn, genres, lengths]);
+  }, [q, sort, players, conn, genres, mobile, lengths]);
 
-  const clear = () => { setQ(''); setPlayers([]); setConn([]); setGenres([]); setLengths([]); };
+  const clear = () => { setQ(''); setPlayers([]); setConn([]); setGenres([]); setMobile([]); setLengths([]); };
 
   return (
     <div className="wrap section">
@@ -62,9 +64,11 @@ export default function Browse() {
           <Group title="Players" selected={players} onToggle={(v) => setPlayers(toggle(players, v))}
             options={[{ value: 'solo', label: 'Has solo mode' }, { value: 'group', label: 'Has multiplayer' }]} />
           <Group title="Connection" selected={conn} onToggle={(v) => setConn(toggle(conn, v))}
-            options={[{ value: 'offline-capable', label: 'Works offline' }, { value: 'join-code', label: 'Join code' }, { value: 'solo-only', label: 'Solo only' }]} />
+            options={ALL_CONNECTIONS.map((c) => ({ value: c, label: CONNECTION[c].badge }))} />
           <Group title="Genre" selected={genres} onToggle={(v) => setGenres(toggle(genres, v))}
             options={ALL_GENRES.map((g) => ({ value: g, label: g }))} />
+          <Group title="Devices" selected={mobile} onToggle={(v) => setMobile(toggle(mobile, v))}
+            options={[{ value: 'mobile', label: 'Mobile friendly' }]} />
           <Group title="Session length" selected={lengths} onToggle={(v) => setLengths(toggle(lengths, v))}
             options={ALL_LENGTHS.map((g) => ({ value: g, label: g }))} />
           <button className="linkbtn" onClick={clear}>Clear filters</button>

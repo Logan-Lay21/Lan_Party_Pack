@@ -10,21 +10,22 @@
     "minPlayers": 1,
     "maxPlayers": 4,
     "modes": ["Solo", "Co-op"],
-    "connection": "offline-capable",
+    "connection": "lan",
+    "platforms": ["Desktop"],
     "genres": ["Adventure"],
     "length": "30+ min",
     "controls": "WASD move, mouse look, click or Space attack, right-click or E item, M map, Esc menu. Gamepads work too.",
     "howToJoin": [
       "Host opens Menu, then Invite Friends, which shows a 5-character code.",
       "Friends pick Join a Friend and type the code, or open the invite link.",
-      "No internet? Everyone joins the same hotspot or Wi-Fi and uses the webcam QR option on both sides."
+      "If the code won't connect, everyone joins the same hotspot or Wi-Fi and uses the webcam QR option on both sides."
     ],
     "author": "MLMecham"
   },
   {
     "id": "dot-slayer",
     "name": "Dot Slayer",
-    "tagline": "Fast browser arena game with room-code co-op for up to four players.",
+    "tagline": "Fast browser arena game with room-code co-op for up to four players. Plays on phones too.",
     "repo": "https://github.com/Logan-Lay21/Dot_Slayer",
     "playUrl": "https://logan-lay21.github.io/Dot_Slayer/",
     "thumbnail": null,
@@ -32,7 +33,8 @@
     "minPlayers": 1,
     "maxPlayers": 4,
     "modes": ["Solo", "Co-op"],
-    "connection": "join-code",
+    "connection": "lan",
+    "platforms": ["Desktop", "Mobile"],
     "genres": ["Arcade"],
     "length": "10 to 30 min",
     "controls": "See the in-game instructions.",
