@@ -42,7 +42,7 @@ export default function Game() {
           </div>
           <div className="two-up">
             <section className="box">
-              <h2>How to play together</h2>
+              <h2>{game.maxPlayers > 1 ? 'How to play together' : 'How to play'}</h2>
               <ol>{game.howToJoin.map((s, i) => <li key={i}>{s}</li>)}</ol>
             </section>
             <section className="box">
