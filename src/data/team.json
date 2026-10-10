@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Mitchell Mecham",
+    "github": "MLMecham",
+    "linkedin": null,
+    "game": "emberwake",
+    "role": "Co-creator · Emberwake",
+    "bio": "Builds worlds you can get lost in. Emberwake is a love letter to retro dungeon crawlers, made so a few friends can clear dungeons together from a browser tab."
+  },
+  {
+    "name": "Logan Lay",
+    "github": "Logan-Lay21",
+    "linkedin": null,
+    "game": "dot-slayer",
+    "role": "Co-creator · Dot Slayer",
+    "school": "BYU-Idaho",
+    "bio": "Computer science student with a curiosity for data science. Made Dot Slayer, a fast arcade arena that works on a phone so nobody at the party sits out."
+  },
+  {
+    "name": "Soroosh Noorzad",
+    "github": "Soroosh-N",
+    "linkedin": "https://www.linkedin.com/in/soroosh-noorzad/",
+    "game": "afterglow",
+    "role": "Co-creator · Afterglow",
+    "school": "University of Utah",
+    "bio": "An all-time student in every field. Made Afterglow, a neon night-racing game with eight cars, four neighborhoods and AI that actually races back."
+  }
+]
