@@ -42,3 +42,4 @@ The app uses `HashRouter` and a relative `base`, so it works from any Pages sub-
 ## How Party Mode works (and its limits)
 
 Party state (playlist, player names, scores) is saved in the host's browser via localStorage. There is no backend. Launching a game opens its own site, and players use that game's own join flow. A single party code that carries a room across games, or automatic scoring, would need a real-time layer (for example PeerJS, which Emberwake already bundles) and is not built yet.
+.
